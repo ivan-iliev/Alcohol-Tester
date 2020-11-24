@@ -17,10 +17,10 @@
 #define FIREBASE_HOST "nodemcu-915c6.firebaseio.com"
 #define FIREBASE_AUTH "6Q0Y2gTSJswpeuBoJUQK0yOLsPu2Lj3UzcWSl0Dn"
 #define WIFI_SSID "Wi-Fi_IoT"                                          //Wi-Fi Name
-#define WIFI_PASSWORD "qwertyui"                                      //Wi-Fi Pass
+#define WIFI_PASSWORD "qwertyui"                                        //Wi-Fi Pass
 
 //setting the analog pin for the sensor , the path for the db and the variable that will hold the value of the sensor
-const int AOUTpin = 0;
+const int AOUTpin = 13;
 String path = "/Values";
 int value;
 
@@ -29,7 +29,7 @@ FirebaseData firebaseData;
 void printResult(FirebaseData & data);
 //Setting the contrast and the pins for our LCD display
 int Contrast = 10;
-LiquidCrystal lcd(05, 04, 00, 02, 14, 12);
+LiquidCrystal lcd(5, 4, 0, 2, 14, 12);
 
 void setup() {
   //Setting the bauds that our serial monitor will print on
